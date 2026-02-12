@@ -93,6 +93,23 @@ The integration polls the inverter every 30 seconds by default to retrieve updat
 
 ## Troubleshooting
 
+### "Not a valid add-on repository" error
+
+If Home Assistant shows this message when adding `https://github.com/TNTBA/sunnyboy_homekit`, you're adding it in the wrong place.
+
+- This project is a **custom integration** for **HACS**.
+- It is **not** a Home Assistant Supervisor add-on repository.
+
+Use this path instead:
+
+1. Open **HACS** → **Integrations**
+2. Open the menu (**⋮**) → **Custom repositories**
+3. Repository: `https://github.com/TNTBA/sunnyboy_homekit`
+4. Category: **Integration**
+5. Add, then install the integration from HACS and restart Home Assistant
+
+Do **not** add this URL in **Settings → Add-ons → Add-on Store → Repositories**.
+
 ### Cannot Connect to Inverter
 
 1. Verify the IP address is correct
