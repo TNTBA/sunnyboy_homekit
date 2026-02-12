@@ -1,0 +1,9 @@
+{
+  "name": "SMA Sunnyboy Solar",
+  "render_readme": true,
+  "content_in_root": false,
+  "domains": [
+    "sunnyboy"
+  ],
+  "homeassistant": ">=2024.1.0"
+}

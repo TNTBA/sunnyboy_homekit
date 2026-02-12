@@ -1,11 +1,16 @@
 {
   "domain": "sunnyboy",
   "name": "SMA Sunnyboy Solar",
-  "codeowners": ["@TNTBA"],
+  "codeowners": [
+    "@TNTBA"
+  ],
   "config_flow": true,
   "documentation": "https://github.com/TNTBA/sunnyboy_homekit",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/TNTBA/sunnyboy_homekit/issues",
-  "requirements": ["aiohttp>=3.8.0"],
+  "integration_type": "hub",
+  "requirements": [
+    "aiohttp>=3.8.0"
+  ],
   "version": "1.0.0"
 }
