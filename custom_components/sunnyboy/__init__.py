@@ -8,6 +8,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryNotReady
+from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import (
     DataUpdateCoordinator,
     UpdateFailed,
@@ -28,7 +29,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     password = entry.data[CONF_PASSWORD]
 
     # Create API client
-    api = SunnyBoyAPI(host, username, password)
+    api = SunnyBoyAPI(host, username, password, session=async_get_clientsession(hass))
 
     # Test connection
     try:
